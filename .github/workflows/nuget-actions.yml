@@ -29,11 +29,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
       - run: echo "Hello.."
-      - uses: cycjimmy/semantic-release-action@v2.5.3
+      - uses: mosfetlang/dev-tagger-action@v1
         with:
-          dry_run: false
-          branch: main
-        env:
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
-          NPM_TOKEN: ${{ secrets.GIT_TOKEN }}
-          NUGET_TOKEN: ${{ secrets.GIT_TOKEN }}
+          tag-prefix: 'my-tag-'
