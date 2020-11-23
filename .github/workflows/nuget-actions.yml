@@ -22,10 +22,9 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      - uses: brpaz/action-semantic-release@v1
+      - uses: cycjimmy/semantic-release-action@v2.5.3
         with:
-          dry_run: "false"
-          install_plugins: "semantic-release/exec"
+          dry_run: "true"
           branch: main
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
